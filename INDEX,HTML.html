@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Portal Educativo Experto</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial;
+    background: #eaeef3;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* MENÚ */
+.menu {
+    width: 260px;
+    background: linear-gradient(180deg, #0f172a, #1e293b);
+    padding: 15px;
+    color: white;
+}
+
+/* TÍTULO */
+.menu h2 {
+    text-align: center;
+    font-size: 22px;
+}
+
+/* BOTONES */
+.menu a {
+    display: block;
+    background: linear-gradient(90deg, #334155, #1e293b);
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+/* EFECTO HOVER */
+.menu a:hover {
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    transform: translateX(6px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BOTÓN ACTIVO */
+.activo {
+    background: linear-gradient(90deg, #22c55e, #16a34a) !important;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(90deg,#2563eb,#3b82f6);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    animation: fadeDown 1s;
+}
+
+/* ANIMACIÓN HEADER */
+@keyframes fadeDown {
+    from {opacity:0; transform:translateY(-20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+/* BANNER */
+.banner {
+    text-align: center;
+    padding: 5px;
+}
+
+.banner img {
+    width: 80px;
+    animation: zoom 2s infinite alternate;
+}
+
+@keyframes zoom {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}
+
+/* FRASE */
+.frase {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* COLORES */
+.c1{color:#ef4444;}
+.c2{color:#22c55e;}
+.c3{color:#3b82f6;}
+.c4{color:#f59e0b;}
+
+/* IFRAME */
+iframe {
+    width: 100%;
+    height: 650px;
+    border: none;
+    opacity: 0;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    background: #0f172a;
+    color: white;
+    padding: 10px;
+}
+
+/* ANIMACIÓN GENERAL */
+.fade {
+    animation: fade 0.8s;
+}
+
+@keyframes fade {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<table border="1">
+<tr>
+
+<td class="menu">
+
+<h2>🎓 PORTAL PRO</h2>
+
+<a href="inicio.html" target="contenido" onclick="activar(this)">
+<i class="fas fa-home"></i> Inicio</a>
+
+<a href="cursos.html" target="contenido" onclick="activar(this)">
+<i class="fas fa-book"></i> Cursos</a>
+
+<a href="noticias.html" target="contenido" onclick="activar(this)">
+<i class="fas fa-newspaper"></i> Noticias</a>
+
+<a href="contacto.html" target="contenido" onclick="activar(this)">
+<i class="fas fa-envelope"></i> Contacto</a>
+
+<p style="text-align:center;">🌟 Nivel Experto ⭐</p>
+
+</td>
+
+<td>
+
+<div class="header fade">
+<h2>🚀 PORTAL EDUCATIVO AVANZADO</h2>
+<p>📚 Innovación | 🌍 Conocimiento | 🎯 Excelencia</p>
+</div>
+
+<div class="banner">
+<img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
+</div>
+
+<div class="frase">
+<span class="c1">É</span>
+<span class="c2">X</span>
+<span class="c3">I</span>
+<span class="c4">T</span>
+<span class="c1">O</span>
+</div>
+
+<iframe name="contenido" id="frame" src="inicio.html"></iframe>
+
+<div class="footer">
+© 2026 Nivel Experto 🔥
+</div>
+
+</td>
+
+</tr>
+</table>
+
+<!-- JAVASCRIPT PRO -->
+<script>
+
+function activar(elemento) {
+    let links = document.querySelectorAll(".menu a");
+    links.forEach(link => link.classList.remove("activo"));
+    elemento.classList.add("activo");
+
+    let frame = document.getElementById("frame");
+    frame.style.opacity = 0;
+
+    setTimeout(() => {
+        frame.style.opacity = 1;
+    }, 200);
+}
+
+</script>
+
+</body>
+</html>

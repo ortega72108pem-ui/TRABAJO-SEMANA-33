@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Portal Turístico</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* MENÚ */
+.menu {
+    width: 260px;
+    background: linear-gradient(180deg,#0f766e,#134e4a);
+    color: white;
+    padding: 15px;
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+/* BOTONES */
+.menu a {
+    display: block;
+    background: #115e59;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+.menu a:hover {
+    background: #0d9488;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(90deg,#06b6d4,#0ea5e9);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* IFRAME */
+iframe {
+    width: 100%;
+    height: 650px;
+    border: none;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    background: #134e4a;
+    color: white;
+    padding: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<table border="1">
+<tr>
+
+<!-- MENÚ -->
+<td class="menu">
+
+<h2>🌍 TURISMO</h2>
+
+<a href="playas.html" target="contenido">🏖 Playas</a>
+<a href="rutas.html" target="contenido">🗺 Rutas</a>
+<a href="hoteles.html" target="contenido">🏨 Hoteles</a>
+<a href="gastronomia.html" target="contenido">🍽 Gastronomía</a>
+
+<p style="text-align:center;">✈️ Viaja y descubre ✈️</p>
+
+</td>
+
+<!-- CONTENIDO -->
+<td>
+
+<div class="header">
+<h2>🌎 PORTAL TURÍSTICO</h2>
+<p>Explora destinos increíbles</p>
+</div>
+
+<iframe name="contenido" src="playas.html"></iframe>
+
+<div class="footer">
+© 2026 Turismo Profesional 🌍
+</div>
+
+</td>
+
+</tr>
+</table>
+
+</body>
+</html>
